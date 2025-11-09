@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portuguese Flashcards</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="container">
+    <h1>Portuguese Flashcards</h1>
+
+    <div class="controls">
+      <label>Number of cards: <input id="count" type="number" min="1" max="500" value="20" /></label>
+      <label>Interval (seconds): <input id="interval" type="number" min="1" max="60" value="10" /></label>
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="resume">Resume</button>
+      <button id="shuffle">Shuffle</button>
+    </div>
+
+    <section class="card" id="card">
+      <div class="word pt" id="pt">—</div>
+      <div class="word en" id="en">—</div>
+    </section>
+
+    <div class="progress">
+      <progress id="progress" value="0" max="100"></progress>
+      <div id="status">0 / 0</div>
+    </div>
+
+    <footer>
+      <small>Shows each word for the specified interval. Built by GitHub Copilot.</small>
+    </footer>
+  </main>
+
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
